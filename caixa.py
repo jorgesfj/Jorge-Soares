@@ -46,7 +46,6 @@ if dinheiro >= 0.05:
     dinheiro = dinheiro - (moedas_05*0.05)
 if dinheiro >= 0.01:
     moedas_01 = dinheiro//0.01
-    dinheiro = dinheiro - (moedas_01*0.01)
 
 
 print('''NOTAS:
@@ -62,4 +61,4 @@ MOEDAS:
 {} moeda(s) de R$ 0.25
 {} moeda(s) de R$ 0.10
 {} moeda(s) de R$ 0.05
-{} moeda(s) de R$ 0.01'''.format(int(notas_100),int(notas_50),int(notas_20),int(notas_10),int(notas_5),int(notas_2),int(moedas_1),int(moedas_50),int(moedas_25),int(moedas_10),int(moedas_05),int(moedas_1)))
+{} moeda(s) de R$ 0.01'''.format(int(notas_100),int(notas_50),int(notas_20),int(notas_10),int(notas_5),int(notas_2),int(moedas_1),int(moedas_50),int(moedas_25),int(moedas_10),int(moedas_05),int(moedas_01)))
