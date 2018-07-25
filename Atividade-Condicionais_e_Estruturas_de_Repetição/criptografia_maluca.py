@@ -17,7 +17,7 @@ if len(primeira)!= len(segunda):
 	print("ERRO")
 else:
 	for i in range(len(primeira)):
-		if primeira[i] == segunda[i] and vogal(primeira) and vogal(segunda):
+		if primeira[i] == segunda[i] and vogal(primeira[i]) and vogal(segunda[i]):
 			palavrafinal += str(i)
 		elif i%2 == 0:
 			palavrafinal += primeira[i].upper()
