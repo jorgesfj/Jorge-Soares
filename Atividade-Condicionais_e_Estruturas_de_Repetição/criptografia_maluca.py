@@ -5,9 +5,6 @@ def vogal(letra):
 	return False
 
 
-
-
-
 palavras  = input()
 lista_palavra = palavras.split()
 primeira = lista_palavra[0]
@@ -15,6 +12,13 @@ segunda = lista_palavra[1]
 palavrafinal = ''
 if len(primeira)!= len(segunda):
 	print("ERRO")
+
+elif any(x.isupper() for x in primeira):
+     print('ERRO')
+
+elif any(x.isupper() for x in segunda):
+     print('ERRO')
+
 else:
 	for i in range(len(primeira)):
 		if primeira[i] == segunda[i] and vogal(primeira[i]) and vogal(segunda[i]):
