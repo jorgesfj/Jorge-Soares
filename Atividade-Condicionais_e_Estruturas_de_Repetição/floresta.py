@@ -1,10 +1,7 @@
 n = int(input())
-cont = 0 
-eucaliptos = (n/2) + 1 
-eucaliptos = int(eucaliptos)
-numero = n - eucaliptos
-for j in range(1,n):
-	for w in range(1,n):
-		if (j*w) + eucaliptos == n:
-			cont +=1
-print(cont)
+cont = 0
+for i in range(n//2,0,-1):
+	aux = n - i
+	if aux%2 == 0:
+		cont +=1
+print(cont//3)
