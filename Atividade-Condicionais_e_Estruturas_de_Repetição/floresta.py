@@ -1,7 +1,12 @@
-n = int(input())
-cont = 0
-for i in range(n//2,0,-1):
-	aux = n - i
-	if aux%2 == 0:
-		cont +=1
-print(cont//3)
+numero = int(input())
+inicio = 0
+quadrado = 5
+passo_a_mais = 3
+i = 1
+while (i*i<=numero/2):
+	if ((numero-quadrado)%passo_a_mais == 0):
+		inicio +=1
+	quadrado +=3
+	passo_a_mais +=2
+	i+=1
+print(inicio)
