@@ -10,7 +10,7 @@ listat = []
 
 if especie.upper() == "MACACO":
 	contadorm +=1
-elif especie.upper() == "COBRA" and pais.upper == "VENEZUELA":
+elif especie.upper() == "COBRA" and pais.upper() == "VENEZUELA":
 	contadorc+=1
 elif especie.upper() == "TIGRE":
 	listat.append(peso)
@@ -25,7 +25,7 @@ while continuador.upper() != "PARAR":
 
 	if especie.upper() == "MACACO":
 		contadorm +=1
-	elif especie.upper() == "COBRA" and pais.upper == "VENEZUELA":
+	elif especie.upper() == "COBRA" and pais.upper() == "VENEZUELA":
 		contadorc+=1
 	elif especie.upper() == "TIGRE":
 		listat.append(peso)
