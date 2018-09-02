@@ -17,22 +17,12 @@ while n!= 0 and m!=0:
 lista2 = []
 for i in range(len(lista)):
 	lista2.append(lista[i].split())
-lista3 = []
 for i in range(len(lista2)):
 	for j in range(len(lista2[i])):
-		lista3.append(lista2[i][j])
-for i in range(len(lista3)):
-	for j in range(0,len(substituicao)-1,2):
-		if lista3[i] == substituicao[j]:
-			lista3[i] = substituicao[j+1]
-lista_num = []
-aux = 0
+		for w in range(0,len(substituicao),2):
+			if substituicao[w] == lista2[i][j]:
+				lista2[i][j] = substituicao[w+1]
 for i in range(len(lista2)):
-	aux+= len(lista2[i])
-	lista_num.append(aux)
-while len(lista_num)<len(lista3):
-	lista_num.append(0)
-print(lista_num)
-
-for i in range(len(lista3)):
-	print(lista3[i], end=" ")
+	for j in range(len(lista2[i])):
+		print(lista2[i][j], end =" ")
+	print("\n")
