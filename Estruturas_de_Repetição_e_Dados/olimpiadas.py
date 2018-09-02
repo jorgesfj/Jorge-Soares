@@ -10,16 +10,16 @@ while contador<n:
 	dic_o[contador] = o
 	dic_p[contador] = p
 	dic_b[contador] = b
-for item in sorted(dic_o, key = dic_o.get, reverse = True):#ordenar o dicionario de acordo com o item
-	vencedores.append(item)#oque interessa pra questão é a posição e não a quantidade de medalhas
-#Até aqui ele so testa para ouro. Se não ouver impate isso é o que ele deve imprimir
-#=====================================================================================================#
-cont = 0
-for j in range(1,len(dic_o)):
-	aux = dic_o[j]
-	for i in range(1,len(dic_o)):
-		if aux == dic_o[i]:
-			cont+=1
-if cont <=1:
-	for i in range(len(vencedores)):
-		print(vencedores[i])
+
+i = 1
+if i+1 < n:
+	i+=1
+	for item in sorted(dic_o, key = dic_o.get, reverse = True):
+		if dic_o[item]!= dic_o[item+1]:
+			print(item)
+		elif dic_p[item]!=dic_p[item+1]:
+			for item in sorted(dic_p, key = dic_p.get, reverse = True):	
+				print(item)
+		elif dic_b[item] != dic_b[item+1]:
+			for item in sorted(dic_b, key = dic_b.get, reverse = True):
+				print(item)
