@@ -4,10 +4,9 @@ dano_total_lista = []
 tempo = []
 danos = int(input())
 cont = 0
-while cont<danos and aux<100:
+while cont<danos:
 	cont+=1
 	x,y = list(map(int,input().split()))
-	aux = x
 	dano_total += x
 	dano_total_lista.append(x)
 	tempo.append(y)
