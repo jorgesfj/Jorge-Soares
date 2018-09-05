@@ -55,7 +55,4 @@ else:
 	else:
 		maior_tempo = (max(distancia)/250)+1
 
-print("{:.0f} {:.0f} {:.0f}".format(sum(qnt_caminhoes),sum(valor),maior_tempo))
-
-
-
+print("{:.0f} {:.0f} {:.0f}\n".format(sum(qnt_caminhoes),sum(valor),maior_tempo))

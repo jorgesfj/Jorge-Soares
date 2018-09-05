@@ -1,25 +1,27 @@
-n,m = list(map(int, input().split()))
-contador = 0
-dic_o = {}
-dic_p = {}
-dic_b = {}
-vencedores = []
-while contador<n:
-	contador+=1
-	o,p,b = list(map(int,input().split()))
-	dic_o[contador] = o
-	dic_p[contador] = p
-	dic_b[contador] = b
+var = input().split()
+n = int(var[0])
+m = int(var[1])
+lista = []
 
-i = 1
-if i+1 < n:
-	i+=1
-	for item in sorted(dic_o, key = dic_o.get, reverse = True):
-		if dic_o[item]!= dic_o[item+1]:
-			print(item)
-		elif dic_p[item]!=dic_p[item+1]:
-			for item in sorted(dic_p, key = dic_p.get, reverse = True):	
-				print(item)
-		elif dic_b[item] != dic_b[item+1]:
-			for item in sorted(dic_b, key = dic_b.get, reverse = True):
-				print(item)
+for i in range(n):
+	lista.append([0,0,0])
+
+dic = {}
+
+def addnalista(listalocal):
+	lista[int(local[0])-1][0]+=1
+	lista[int(local[1])-1][1]+=1
+	lista[int(local[2])-1][2]+=1
+
+for i in range(n):
+	try:
+		local = input().split()
+		addnalista(local)
+	except:
+		pass
+
+for i in range(n):
+	dic[i+1]=str(lista[i][0])+str(lista[i][1])+str(lista[i][2])
+
+for item in sorted(dic,key = dic.get, reverse = True):
+	print(item)
