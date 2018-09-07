@@ -12,3 +12,4 @@ def comb(n,d):
 n = int(input())
 d = int(input())
 print(comb(n,d))
+#nao consegui fazer
