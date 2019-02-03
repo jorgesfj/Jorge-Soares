@@ -31,30 +31,14 @@ public class Hotel {
 	 @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
 	private List<Endereco> endereco;
 	 
+	 @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
+	private List<Quarto> quartos;
 
-//	}
-//	public void setTelefone(Telefone telefone) {
-//		this.telefone=telefone;
-//	}
-//	public void setEndereco(Endereco endereco) {
-//		this.endereco = endereco;
-//	}
-//	public void setQuarto(Quarto quarto) {
-//		this.quarto = quarto;
-//	}
+	 
+	public List<Quarto> getQuartos() {
+		return quartos;
+	}
 
-//	
-//	public Telefone getTelefone() {
-//		return this.telefone;
-//	}
-//	public Endereco getEndereco() {
-//		return this.endereco;
-//	}
-//	public Quarto getQuarto() {
-//		return this.quarto;
-//	}
-//	
-	
 	public List<Pessoa> getPessoa() {
 		return pessoa;
 	}

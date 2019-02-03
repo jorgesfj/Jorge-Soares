@@ -1,20 +1,32 @@
 package com.projeto.domain;
 
+import javax.persistence.Entity;
+
 import javax.persistence.CascadeType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.List;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.GenerationType;
 
-
-public class Quarto {
+@Entity
+public class Quarto{
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private String type;
 	private boolean isBusy;
 	private int roomNumber;
-	
+	 
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "hotel_id")
+	private Hotel hotel;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pessoa")
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "quarto")
 	private List<Cama> cama;
 	
 	
